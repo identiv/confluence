@@ -1,0 +1,37 @@
+name: 'Generate confluence page'
+description: 'Render markdown file into Confluence page'
+inputs:
+  source:
+    description: 'source file to be render'
+    required: true
+    default: 'README.md'
+  url:
+    description: 'confluence url'
+    required: true
+  conf-account:
+    description: 'confluence account'
+    required: true
+  conf-api-key:
+    description: 'confluence api key'
+    required: true
+runs:
+  using: "composite"
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v3
+    with:
+      fetch-depth: 0
+  - name: Set Up Go
+    uses: actions/setup-go@v3
+    with:
+      go-version: '^1.13.1'
+  - name: Set Up Mark Tool
+    run: go install github.com/kovetskiy/mark@latest
+  - name: Generate Confluence page
+    run: |
+      mark -u "$CONFLUENCE_ACCOUNT" -p "$CONFLUENCE_API_KEY" -b "$URL" -f "$SOURCE"
+    env:
+      SOURCE: ${{ inputs.source }}
+      URL: ${{ inputs.url }}
+      CONFLUENCE_ACCOUNT: ${{ inputs.conf-account }}
+      CONFLUENCE_API_KEY: ${{ inputs.conf-api-key }}

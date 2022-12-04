@@ -1,0 +1,1 @@
+A Github action to generate a markdown file into a Confluence page.
