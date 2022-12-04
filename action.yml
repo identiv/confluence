@@ -27,9 +27,11 @@ runs:
       go-version: '^1.13.1'
   - name: Set Up Mark Tool
     run: go install github.com/kovetskiy/mark@latest
+    shell: bash
   - name: Generate Confluence page
     run: |
       mark -u "$CONFLUENCE_ACCOUNT" -p "$CONFLUENCE_API_KEY" -b "$URL" -f "$SOURCE"
+    shell: bash
     env:
       SOURCE: ${{ inputs.source }}
       URL: ${{ inputs.url }}
