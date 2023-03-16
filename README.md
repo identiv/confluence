@@ -4,7 +4,50 @@ This uses the tool in repo `https://github.com/kovetskiy/mark`
 
 The 'secret sauce' that makes it work are `md` tags **that github does not render**
 
-[HERE](https://raw.githubusercontent.com/identiv/enterphone-hardware/main/Hardware.md?token=GHSAT0AAAAAAB2JUOJ2TMHAOQ34345DE4TUZASWRGQ) is the raw content for the Enterphone Hardware `Readme.md` - you can now see the meta
+Here is the raw content for the Enterphone Hardware `hardware.md` - you can now see the meta
+
+```
+<!-- Space: APD -->
+<!-- Parent: About the Engineering Project Documentation Space -->
+<!-- Parent: Physical Access Control (Mark A.) -->
+<!-- Parent: Viscount Access Control -->
+<!-- Parent: Enterphone -->
+<!-- Title: Enterphone Hardware -->
+<!-- Attachment: ./identiv_iQ_back.pdf -->
+<!-- Attachment: ./identiv_iQ_front.pdf -->
+<!-- Attachment: ./identiv_mesh19_back.pdf -->
+<!-- Attachment: ./identiv_mesh19_front.pdf -->
+<!-- Attachment: ./enterphone_19_mounting.svg -->
+<!-- Attachment: ./enterphone_iq_mounting.svg -->
+<!-- Attachment: ./enterphone_19_mounting.png -->
+<!-- Attachment: ./enterphone_iq_mounting.png -->
+<!-- Attachment: ./Enterphone_Mounting_Requirements.pdf -->
+<!-- Attachment: ./Enterphone_19.pdf -->
+<!-- Attachment: ./Enterphone_IQ.pdf -->
+
+# Enterphone Hardware
+
+## Drawings 
+### Enterphone IQ 
+* [Back](./identiv_iQ_back.pdf)
+* [Front](./identiv_iQ_front.pdf)
+* [Inside](./Enterphone_IQ.pdf)
+* Mounting:
+  * [PNG](./enterphone_iq_mounting.png)
+  * [SVG](./enterphone_iq_mounting.svg)
+
+### Enterphone 19"
+* [Back](./identiv_mesh19_back.pdf)
+* [Front](./identiv_mesh19_front.pdf)
+* [Inside](./Enterphone_19.pdf)
+* Mounting:
+  * [PNG](./enterphone_19_mounting.png)
+  * [SVG](./enterphone_19_mounting.svg)
+
+### Mounting
+
+* [Mounting Requirements](./Enterphone_Mounting_Requirements.pdf) -- see also above
+```
 
 
 Example usage
