@@ -14,10 +14,15 @@ inputs:
   conf-api-key:
     description: 'confluence api key'
     required: true
+  checkout:
+    description: 'checkout your source'
+    required: false
+    default: true
 runs:
   using: "composite"
   steps:
   - name: Checkout
+    if: ${{ inputs.checkout }} == true
     uses: actions/checkout@v3
     with:
       fetch-depth: 0
