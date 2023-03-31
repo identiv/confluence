@@ -14,7 +14,7 @@ inputs:
   conf-api-key:
     description: 'confluence api key'
     required: true
-  checkout:
+  checkout-clean:
     description: 'checkout your source'
     required: false
     default: true
@@ -22,10 +22,10 @@ runs:
   using: "composite"
   steps:
   - name: Checkout
-    if: ${{ inputs.checkout }} == true
     uses: actions/checkout@v3
     with:
       fetch-depth: 0
+      clean: ${{ inputs.checkout }}
   - name: Set Up Go
     uses: actions/setup-go@v3
     with:
