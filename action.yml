@@ -36,7 +36,6 @@ runs:
   - name: Generate Confluence page
     run: |
       mark -u "$CONFLUENCE_ACCOUNT" -p "$CONFLUENCE_API_KEY" -b "$URL" -f "$SOURCE" -k
-      echo ${{ inputs.checkout-clean }}
     shell: bash
     env:
       SOURCE: ${{ inputs.source }}
