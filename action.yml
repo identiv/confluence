@@ -37,3 +37,4 @@ runs:
       URL: ${{ inputs.url }}
       CONFLUENCE_ACCOUNT: ${{ inputs.conf-account }}
       CONFLUENCE_API_KEY: ${{ inputs.conf-api-key }}
+      MARK_MERMAID_PROVIDER: mermaid-go
