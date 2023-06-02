@@ -14,6 +14,10 @@ inputs:
   conf-api-key:
     description: 'confluence api key'
     required: true
+  checkout-clean:
+    description: 'checkout your source'
+    required: false
+    default: true
 runs:
   using: "composite"
   steps:
@@ -21,6 +25,7 @@ runs:
     uses: actions/checkout@v3
     with:
       fetch-depth: 0
+      clean: ${{ inputs.checkout-clean }}
   - name: Set Up Go
     uses: actions/setup-go@v3
     with:
@@ -37,3 +42,4 @@ runs:
       URL: ${{ inputs.url }}
       CONFLUENCE_ACCOUNT: ${{ inputs.conf-account }}
       CONFLUENCE_API_KEY: ${{ inputs.conf-api-key }}
+      MARK_MERMAID_PROVIDER: mermaid-go
